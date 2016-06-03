@@ -105,8 +105,43 @@ section, footer {
 }
 
 /* Mobile ----------- */
-@media only screen and (max-width : 550px) {
+@media only screen and (max-width : 551px) {
   body::before{ content: "Mobile " }
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper > * {
+    order: 999;
+  }
+
+  .flex-nav {
+    order: 1;
+  }
+
+  .title {
+    order: 2;
+  }
+
+  .details {
+    order: 3;
+  }
+
+  .toggleNav {
+    display:block;
+  }
+  .flex-nav ul {
+    display:none;
+  }
+}
+
+@media only screen and (max-device-width : 551px) {
+  body::before{ content: "Mobile *" }
   .flex-nav li {
     flex-basis: 100%;
   }
