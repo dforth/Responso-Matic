@@ -28,7 +28,13 @@
       </nav>
 
       <section class="hero">
-        <img src="http://placekitten.com/1000/768">
+        <picture>
+          <source srcset="http://placekitten.com/1024/768" media="(min-width : 1024px)"/>
+          <source srcset="http://placekitten.com/800/600" media="(min-width : 551px) and (max-width : 1024px)"/>
+          <source srcset="http://placekitten.com/640/480" media="(max-width : 551px)"/>
+          <source srcset="http://placekitten.com/640/480" media="(max-device-width : 551px)"/>
+          <img src="http://placekitten.com/1024/768">
+        </picture>
       </section>
 
       <section class="details">
