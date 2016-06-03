@@ -24,6 +24,7 @@ a {
   width: 100%;
   text-align: center;
   transition: all 0.5s;
+  line-height: 1em;
 }
 
 .title a {
@@ -75,6 +76,7 @@ section, footer {
 }
 
 .flex-nav .social {
+
   flex: 1;
 }
 
@@ -82,13 +84,13 @@ section, footer {
   color: purple;
 }
 
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1024px) {
-  body::before{ content: "Desktops and laptops" }
+/* Desktop  ----------- */
+@media all and (min-width : 800px) {
+  body::before{ content: "Desktop" }
 }
 
 /* Tablets or smaller screens  ----------- */
-@media only screen and (min-width : 551px) and (max-width : 1024px) {
+@media all and (min-width : 551px) and (max-width : 800px) {
   body::before{ content: "Tablets or smaller screens" }
 
   .flex-nav ul {
@@ -105,7 +107,7 @@ section, footer {
 }
 
 /* Mobile ----------- */
-@media only screen and (max-width : 551px) {
+@media all and (max-width : 551px) {
   body::before{ content: "Mobile " }
   .flex-nav li {
     flex-basis: 100%;
@@ -135,13 +137,16 @@ section, footer {
   .toggleNav {
     display:block;
   }
+  
   .flex-nav ul {
+    flex-wrap: wrap;
     display:none;
   }
 }
 
-@media only screen and (max-device-width : 551px) {
+@media all and (max-device-width : 551px) {
   body::before{ content: "Mobile *" }
+
   .flex-nav li {
     flex-basis: 100%;
   }
