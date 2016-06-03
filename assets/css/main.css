@@ -82,7 +82,14 @@ section, footer {
   color: purple;
 }
 
-@media all and (max-width:800px) {
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1024px) {
+  body::before{ content: "Desktops and laptops" }
+}
+
+/* Tablets or smaller screens  ----------- */
+@media only screen and (min-width : 551px) and (max-width : 1024px) {
+  body::before{ content: "Tablets or smaller screens" }
 
   .flex-nav ul {
     flex-wrap: wrap;
@@ -97,8 +104,9 @@ section, footer {
   }
 }
 
-@media all and (max-width:500px) {
-
+/* Mobile ----------- */
+@media only screen and (max-width : 550px) {
+  body::before{ content: "Mobile " }
   .flex-nav li {
     flex-basis: 100%;
   }
@@ -130,117 +138,4 @@ section, footer {
   .flex-nav ul {
     display:none;
   }
-}
-
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  body::before{ content: "Smartphones (portait and lanscape)" }
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-  body::before{ content: "Smartphones (lanscape)" }
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-  body::before{ content: "Smartphones (portait)" }
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  body::before{ content: "iPads (portrait and landscape)" }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-  body::before{ content: "iPads (landscape)" }
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-  body::before{ content: "iPads (portrait)" }
-}
-/**********
-iPad 3
-**********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-  body::before{ content: "iPad 3 (landscape)" }
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-  body::before{ content: "iPad 3 (portrait)" }
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-  body::before{ content: "Desktops and laptops" }
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-  body::before{ content: "Large Screens" }
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-  body::before{ content: "iPhone 4 (landscape)" }
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-  body::before{ content: "iPhone 4 (portrait)" }
-}
-
-/* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "iPhone 5 (landscape)" }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "iPhone 5 (portrait)" }
-}
-
-/* iPhone 6 ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "iPhone 6 (landscape)" }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "iPhone 6 (portrait)" }
-}
-
-/* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "iPhone 6+ (landscape)" }
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "iPhone 6+ (portrait)" }
-}
-
-/* Samsung Galaxy S3 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "Samsung Galaxy S3 (landscape)" }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-  body::before{ content: "Samsung Galaxy S3 (portrait)" }
-}
-
-/* Samsung Galaxy S4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-  body::before{ content: "Samsung Galaxy S4 (landscape)" }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-  body::before{ content: "Samsung Galaxy S4 (portrait)" }
-}
-
-/* Samsung Galaxy S5 ----------- */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-  body::before{ content: "Samsung Galaxy S5 (landscape)" }
-}
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-  body::before{ content: "Samsung Galaxy S5 (portrait)" }
 }
